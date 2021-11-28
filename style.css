@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=McLaren&family=Outfit:wght@300;400;600&family=Permanent+Marker&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+
+    --veryveryvery-dark-blue: hsl(217, 54%, 11%);
+    --veryvery-dark-blue: hsl(216, 50%, 16%);
+    --very-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--veryveryvery-dark-blue); 
+    /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: var(--veryvery-dark-blue);
+    width: 40vh;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px hsl(--very-dark-blue);
+    padding: 20px;
+}
+
+h1{
+    color: white;
+    margin: 10px 0;
+}
+
+.description{
+    font-size: 18px;
+    color: var(--soft-blue);
+    margin-bottom: 10px;
+}
+
+.row{
+    display:flex;
+    gap: 10px;
+}
+
+.row img{
+    height: 17px;
+    width: 17px;
+}
+
+.row p{
+    color: var(--soft-blue);
+}
+
+.row .price{
+    color: var(--cyan);
+}
+
+.spacebetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subContainer2{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    align-items: center;
+}
+.subContainer2 img{
+    width: 40px;
+    border-radius: 50%;
+    border: solid 1px white;
+}
+
+strong{
+    color: white;
+}
+
+hr{
+    margin-top: 25px;
+    border: 1px solid var(--very-dark-blue);
+}
+
+/*hover*/
+strong:hover{
+    opacity: 0.8;
+    color: var(--cyan);
+    transition: all 0.2s ease-in-out;
+}
+
+h1:hover{
+    opacity: 0.8;
+    color: var(--cyan);
+    transition: all 0.2s ease-in-out;
+}
+
+.card {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.card .img-top {
+    display: none;
+    width: inherit;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+}
+.card:hover .img-top {
+    display: inline;
+    background-color: var(--cyan);
+}
+
+@media (min-weight: 768px){ /*large screen*/
+    .container{
+        width: 500px;
+    }
+}
